@@ -33,6 +33,7 @@ $Readhost = Read-Host -Prompt ("y | n ")
 Write-Host -ForegroundColor yellow "What's the domain name going to be?  It should be ad.<your ASU email prefix>.lan" 
 $domainname = Read-Host -Prompt (" ")
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools | Out-Null
+#use ad.jtwooda1.lan for next instruction
 Install-ADDSForest -DomainName $domainname
 
 # the machine will now reboot
